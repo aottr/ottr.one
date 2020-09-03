@@ -1,15 +1,15 @@
 GET http://localhost:5000/api/protected
 Authorization: Bearer 
 ### 
-POST http://localhost:5000/api/login
+POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "username": "Admin"
+    "username": "Alex"
 }
 
 ###
-POST http://localhost:5000/api/token
+POST http://localhost:5000/auth/token
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/api/logout
+DELETE http://localhost:5000/auth/logout
 Content-Type: application/json
 
 {

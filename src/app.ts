@@ -5,11 +5,14 @@ import path from 'path';
 // init config
 dotenv.config();
 
+import authRoutes from './routes/auth';
+import apiRoutes from './routes/api';
+
 let port = process.env.SERVER_PORT;
 const app: Application = express();
 
-import apiRoutes from './routes/api';
 app.use('/api', apiRoutes);
+app.use('/auth', authRoutes);
 
 // configure express for ejs
 app.set('views', path.join( __dirname, 'views' ));
